@@ -1,0 +1,25 @@
+{
+    "projects": [
+        {
+            "companyName": "Company A",
+            "projectName": "No More Lonely Battles",
+            "tags": ["UX Research", "UI Design", "Product Design", "Usability / Competition"],
+            "projectLink": "#",
+            "previewLink": "/kkSxFziDIBZtflZEfzJBhjQ38.mp4"
+        },
+        {
+            "companyName": "Company B",
+            "projectName": "The Client Command Center",
+            "tags": ["2023 Q4", "Dashboard", "B2B", "Client Facing", "Space Planning"],
+            "projectLink": "#",
+            "previewLink": "/kkSxFziDIBZtflZEfzJBhjQ38.mp4"
+        },
+        {
+            "companyName": "Company B",
+            "projectName": "The Client Command Center",
+            "tags": ["2023 Q4", "Dashboard", "B2B", "Client Facing", "Space Planning"],
+            "projectLink": "#",
+            "previewLink": "/kkSxFziDIBZtflZEfzJBhjQ38.mp4"
+        }
+    ]
+}

@@ -1,0 +1,514 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white; /* Purple background */
+    color: #000000;
+    line-height: 1.5;
+    padding-top: 16px; /* To add space from the header */
+    z-index: 999;
+}
+
+/* Create a wrapper to limit width and prevent overflow */
+.body-wrapper {
+    width: 937px; /* Match the header's visible width */
+    margin: 0 auto; /* Center content */
+    padding: 0 16px; /* Optional padding for content spacing */
+}
+
+/* Optionally, add some global styles for inner content */
+.container {
+    width: 100%; /* Ensure the content inside fits */
+    padding: 16px 0;
+    max-width: 100%;
+}
+
+
+/* Styling for the company name */
+.project .company-name {
+    font-size: 0.8rem;
+    color: #777; /* Light gray text */
+    margin-bottom: 5px; /* Space between company name and project title */
+    display: block;
+    text-transform: uppercase; /* Optional: makes the company name appear in uppercase */
+    font-weight: 600; /* Optional: slightly bolder text for emphasis */
+}
+
+
+.logo img {
+  width: 100px;   /* Set the width of the logo */
+  height: auto;   /* Maintain aspect ratio */
+  display: inline-block; /* Ensure it stays inline with other elements */
+  margin-left: 20px;  /* Adjust this value to move the logo to the right */
+}
+
+#liquid-canvas {
+    position: absolute; /* Ensure the canvas is positioned absolutely */
+    top: -100px; /* Move the canvas up relative to its container */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10 !important; /* Set a high z-index to ensure it's on top */
+    pointer-events: none; /* Allow clicks to pass through to other elements */
+}
+
+
+/* Styling for the tags (hashtags) */
+.project-meta span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark text color */
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 12px; /* Rounded corners */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+    cursor: default; /* Prevent pointer cursor to indicate non-clickable */
+}
+
+/* Hover effect for reactivity */
+.project-meta span:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+
+/* Container for main content */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+}
+
+/* Structural lines */
+.left-border, .right-border {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #f0f0f0;
+}
+
+.left-border {
+    left: 0;
+}
+
+.right-border {
+    right: 0;
+}
+
+
+
+
+
+
+/* Header Styles */
+header {
+    position: relative;
+    width: 100%;
+    max-width: 937px; /* Ensure header is not wider than the content */
+    padding: 16px 0;
+    background-color: white; /* Purple background */
+    z-index: 1; /* Move header to the bottom layer */
+    margin: 0 auto; /* Center the header */
+    
+    /* Bottom border */
+    border-bottom: 1px solid #f0f0f0; /* Bottom border */
+}
+
+
+
+
+/* Header Content Container */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 16px;
+}
+
+/* Logo */
+header .logo img {
+    width: 60px;  /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Position the logo absolutely */
+    left: 0; /* Align it to the left edge */
+    top: 2px;
+    bottom: 6px;
+}
+
+
+/* Navigation */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 25px;
+    padding-left: 20px; /* Adjust this value to shift items left */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+
+
+/* Hero section styles */
+.hero {
+    position: relative;  /* Keep it relatively positioned for the content inside */
+    z-index: 1;          /* Lower z-index so the animation appears above it */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 100px 0 64px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hero-image {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #f0f0f0;
+    border-radius: 50%;
+    margin-bottom: 32px;
+}
+
+.hero h1 {
+    text-transform: u;
+    font-size: 9rem;
+    font-weight: normal;
+    color: black; /* Set the text color to black */
+    text-align: center;
+    position: relative;
+    z-index: -1; /* Set the z-index to -1 to place it behind the canvas */
+    mix-blend-mode: lighten;  /* Blend the text with the water effect */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.3);
+    filter: blur(0px); /* Apply a permanent blur effect */
+}
+
+.hero p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.hero a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Water Drop Element Styling */
+.drop {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1); /* Light transparent base */
+    border-radius: 50%; /* Start as a perfect sphere */
+    box-shadow: 
+        inset 15px 15px 40px rgba(0, 0, 0, 0.2), /* Dark inner shadow for depth */
+        inset -10px -10px 40px rgba(255, 255, 255, 0.6), /* Light inner highlight */
+        5px 5px 20px rgba(0, 0, 0, 0.1), /* Subtle outer shadow */
+        -5px -5px 20px rgba(255, 255, 255, 0.4); /* Subtle outer highlight */
+    animation: rippleAnimation 8s ease-in-out infinite;
+    backdrop-filter: blur(2px); /* Maintains the blur effect */
+    -webkit-backdrop-filter: blur(2px);
+    pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Symmetrical Ripple Animation */
+@keyframes rippleAnimation {
+    0% {
+        border-radius: 50%; /* Perfect sphere */
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    20% {
+        border-radius: 60% 40% 55% 45% / 50% 55% 45% 50%; /* Subtle distortion */
+    }
+    40% {
+        border-radius: 50% 60% 40% 55% / 60% 50% 55% 45%; /* Balanced ripples */
+    }
+    60% {
+        border-radius: 45% 50% 60% 40% / 55% 60% 50% 45%; /* Reverse ripples */
+    }
+    80% {
+        border-radius: 50% 55% 45% 50% / 50% 45% 55% 60%; /* Return to symmetry */
+    }
+    100% {
+        border-radius: 50%; /* Back to a perfect sphere */
+        transform: translate(-50%, -50%) rotate(360deg); /* Smooth rotation */
+    }
+}
+
+
+
+/* Craft section */
+.craft-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.craft-title::before,
+.craft-title::after {
+    content: '';
+    width: 1px;
+    height: 32px;
+    background-color: #f0f0f0;
+}
+
+.craft-title::before {
+    margin-bottom: 32px;
+}
+
+.craft-title::after {
+    margin-top: 32px;
+}
+
+.craft-title h2 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Project section styles */
+.project {
+    border: 1px solid #f0f0f0;
+    border-width: 1px 0 1px 0; /* top, right, bottom, left */
+    padding: 32px;
+    margin-top: 96px;
+    border-radius: 0 !important; /* Ensure no rounded corners */
+}
+
+
+
+.project h3 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.project-meta span {
+    font-size: 14px;
+    color: #666666;
+}
+
+.view-work {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-bottom: 32px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+
+/* General Footer Styles */
+footer {
+    width: 937px; /* Matches the width of the lines */
+    margin-left: calc(50% - 468.5px); /* Aligns with the left line */
+    margin-right: calc(50% - 468.5px); /* Aligns with the right line */
+    border-top: 1px solid #f0f0f0; /* Top border to visually separate the footer */
+    padding: 32px 0; /* Padding for spacing */
+    margin-top: 64px; /* Adjusted margin for spacing */
+    background-color: #fff; /* Background color */
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Align items vertically */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    width: 100%;
+    max-width: 937px; /* Ensures it does not exceed the width constraint */
+    margin: 0 auto;
+    padding: 0 16px; /* Add padding to prevent content from touching the edges */
+}
+
+/* Footer Cells */
+.footer-cell {
+    flex: 1; /* Makes each cell take equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top of the cell */
+    padding: 0 16px; /* Add padding to prevent content from touching the edges */
+    text-align: left; /* Ensures text is left-aligned */
+}
+
+/* Footer Logo Cell */
+.footer-logo img {
+    display: block;  /* Ensure it's a block-level image */
+    width: 60%;      /* Adjust to fit its container width */
+    height: auto;    /* Maintain aspect ratio */
+    background: none; /* Ensure there's no background */
+    border: none;    /* Remove any border */
+    margin: 0;       /* Remove any unintended margin */
+    padding: 0;      /* Remove any unintended padding */
+    object-fit: contain; /* Ensure it doesn't stretch */
+}
+
+/* Optionally, if you want to center the image inside the cell */
+.footer-logo {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: flex-start;     /* Align to the top */
+    width: 100%;                 /* Take full width */
+    height: 100%;                /* Take full height of the container */
+    padding: 0;                  /* No padding */
+}
+
+
+/* Footer Sections */
+.footer-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px; /* Reduced margin */
+    text-align: left; /* Left align the section headers */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Left align the list items */
+}
+
+.footer-section ul li {
+    margin-bottom: 4px; /* Reduced space between list items */
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 14px;
+    transition: color 0.2s; /* Hover effect */
+}
+
+.footer-section ul li a:hover {
+    color: #000000; /* Hover color */
+}
+
+/* Footer Right Section */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left; /* Left align text */
+}
+
+/* Vertical Cell Lines */
+.footer-content .footer-cell:not(:last-child) {
+    border-right: 1px solid #f0f0f0; /* Create vertical lines between cells */
+}
+
+/* Footer Theme Toggle Button */
+.footer-right .theme-toggle {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+/* Footer Made With Text */
+footer .made-with {
+    font-size: 12px; /* Smaller font size */
+    color: #999999;
+    text-align: left; /* Left-align the footer text */
+}
+
+
+.theme-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.theme-toggle span {
+    width: 16px;
+    height: 16px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #666666;
+}
+
+.made-with {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 8px;
+}
+
+/* Set up a fixed width for the container or use a percentage if it's dynamic */
+.container {
+    width: 1200px; /* Set your container width */
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Positioning for vertical lines based on horizontal line edges */
+.vertical-line {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #f0f0f0; /* Line color */
+}
+
+.left-line {
+    left: calc(50% - 468.5px); /* Left vertical line at the left edge of the horizontal lines */
+}
+
+.right-line {
+    left: calc(50% + 468.5px); /* Right vertical line at the right edge of the horizontal lines */
+}

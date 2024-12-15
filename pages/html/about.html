@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Kris Yotam</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r136/three.min.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/pages/css/about.css">
+</head>
+<body>
+    <div class="left-border"></div>
+    <div class="right-border"></div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">KY</a>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Craft</a></li>
+                        <li><a href="#lab">Lab</a></li>
+                        <li><a href="/pages/html/about.html">About</a></li>
+                        <li><a href="/pages/html/cv.html">CV</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-section">
+            <h1>Kris Yotam</h1>
+            <p>Indiana University Undergrad in Mathematics & Computer Science. I'm passionate about creating things</p>
+            
+            <div class="tabs">
+                <div class="tab" id="background-tab">
+                    <h2>Background</h2>
+                    <div class="tab-content" id="background-content">
+                        <p>Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them. Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them. Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them.</p>
+                    </div>
+                </div>
+
+                <div class="tab" id="design-philosophy-tab">
+                    <h2>Design Philosophy</h2>
+                    <div class="tab-content" id="design-philosophy-content">
+                        <p>My background has shaped my design philosophy to prioritize minimizing cognitive load for users. Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them. Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them.</p>
+                    </div>
+                </div>
+
+                <div class="tab" id="things-i-love-tab">
+                    <h2>Things I Love</h2>
+                    <div class="tab-content" id="things-i-love-content">
+                        <p>I find inspiration in the world around me. I love to travel and experience different cultures. Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them. Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them. Ever since I can remember, I've always been curious and intrigued about how people see and interact with the world around them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"></div>
+                <div class="footer-section">
+                    <h4>Craft</h4>
+                    <ul>
+                        <li><a href="#">MindMath</a></li>
+                        <li><a href="#">TexNique</a></li>
+                        <li><a href="#">1611 KJV</a></li>
+                        <li><a href="#">Torqata</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/krisyotam">LinkedIn ↗</a></li>
+                        <li><a href="/pages/html/cv.html">Read.cv ↗</a></li>
+                        <li><a href="mailto:krisyotam@protonmail.com">Mail ↗</a></li>                        
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <div class="theme-toggle">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="copyright">© 2024 Kris Yotam. All Rights Reserved</p>
+                    <p class="made-with">Made with ❤️ and Matcha Lattes (120% sugar, less ice)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.tab h2').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabContainer = tab.closest('.tab');
+                const content = tab.nextElementSibling;
+                
+                // If the tab content is already open, close it
+                if (content.classList.contains('open')) {
+                    content.classList.remove('open');
+                    tab.classList.remove('open');
+                    tabContainer.style.borderBottom = '1px solid #D3D3D3';
+                } else {
+                    // Open the clicked tab content without closing others
+                    content.classList.add('open');
+                    tab.classList.add('open');
+                    tabContainer.style.borderBottom = 'none';
+                }
+            });
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

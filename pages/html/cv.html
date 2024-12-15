@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header styles */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 0.25rem;
+        }
+
+        .website {
+            color: #666;
+            text-decoration: none;
+        }
+
+        /* Section styles */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        /* Experience items */
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .year {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .position {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .location {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            color: #666;
+        }
+
+        /* Download button */
+        .download-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: #f5f5f5;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .download-btn:hover {
+            background-color: #e5e5e5;
+        }
+
+        /* Contact section */
+        .contact-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="/assets/krisyotam.jpg" alt="Profile" class="profile-img">
+        <h1 class="name">Kris Yotam</h1>
+        <p class="subtitle">Software Engineer in Chicago</p>
+        <a href="https://krisyotam.com" class="website">krisyotam.com</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>About</h2>
+            <p class="description">Passionate about building efficient software systems with a focus on performance and scalability. Always looking to learn and apply new technologies in impactful ways.</p>
+            <a href="/assets/resume.pdf" class="download-btn" download>Download Resume</a>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="experience-item">
+                <p class="year">2023</p>
+                <p class="position">AI Chatbot for Local Businesses</p>
+                <p class="description">Developed an AI-powered chatbot to automate customer support for small businesses, reducing response time by 40%.</p>
+            </div>
+            <div class="experience-item">
+                <p class="year">2022</p>
+                <p class="position">Personal Finance Dashboard</p>
+                <p class="description">Built a full-stack web application to help individuals manage personal finances, integrating budgeting tools and data visualization features.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <p class="year">2023 — Present</p>
+                <p class="position">Junior Software Engineer at PixelTree Studios</p>
+                <p class="location">Chicago, IL</p>
+                <p class="description">Developing and maintaining a suite of web applications for local businesses, focusing on improving user experience and performance.</p>
+            </div>
+            <div class="experience-item">
+                <p class="year">2022 — 2023</p>
+                <p class="position">Junior Developer at Nimbus Interactive</p>
+                <p class="location">Remote</p>
+                <p class="description">Contributed to the development of a SaaS platform for small businesses, working on back-end development and integrating third-party APIs.</p>
+            </div>
+            <div class="experience-item">
+                <p class="year">2021 — 2022</p>
+                <p class="position">Software Engineering Intern at Deltasoft</p>
+                <p class="location">Chicago, IL</p>
+                <p class="description">Assisted in the development of internal tools and applications, improving data processing workflows for the company's core services.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="experience-item">
+                <p class="year">2023</p>
+                <p class="position">CompTIA A+</p>
+            </div>
+            <div class="experience-item">
+                <p class="year">2023</p>
+                <p class="position">Java Web Development (Udacity)</p>
+            </div>
+            <div class="experience-item">
+                <p class="year">2023</p>
+                <p class="position">JavaScript Algorithms and Data Structures (FreeCodeCamp)</p>
+            </div>
+            <div class="experience-item">
+                <p class="year">2023</p>
+                <p class="position">Responsive Web Design (FreeCodeCamp)</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="experience-item">
+                <p class="year">2022 — Present</p>
+                <p class="position">B.S. in Mathematics</p>
+                <p class="location">Indiana University, Bloomington, IN</p>
+            </div>
+            <div class="experience-item">
+                <p class="year">2022 — Present</p>
+                <p class="position">Minor in Computer Science</p>
+                <p class="location">Indiana University, Bloomington, IN</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <div class="contact-item">
+                <span>Website: </span>
+                <a href="https://krisyotam.com">krisyotam.com</a>
+            </div>
+            <div class="contact-item">
+                <span>Email: </span>
+                <a href="mailto:krisyotam@protonmail.com">krisyotam@protonmail.com</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

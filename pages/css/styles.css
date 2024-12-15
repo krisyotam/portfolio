@@ -30,6 +30,22 @@ body {
 }
 
 
+/* Disable link styles inside .craft-title */
+.craft-title a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the inherited color */
+}
+
+.craft-title a:hover {
+    color: #888; /* Change to a shade of grey on hover */
+}
+
+.logo {
+    pointer-events: none;
+}
+
+
+
 /* Styling for the company name */
 .project .company-name {
     font-size: 0.8rem;
@@ -42,7 +58,7 @@ body {
 
 
 .logo img {
-  width: 100px;   /* Set the width of the logo */
+  width: 120px;   /* Set the width of the logo */
   height: auto;   /* Maintain aspect ratio */
   display: inline-block; /* Ensure it stays inline with other elements */
   margin-left: 20px;  /* Adjust this value to move the logo to the right */
@@ -140,7 +156,7 @@ header {
 
 /* Logo */
 header .logo img {
-    width: 60px;  /* Adjust the width of the logo */
+    width: 100px;  /* Adjust the width of the logo */
     height: auto; /* Maintain aspect ratio */
     position: relative; /* Position the logo absolutely */
     left: 0; /* Align it to the left edge */
